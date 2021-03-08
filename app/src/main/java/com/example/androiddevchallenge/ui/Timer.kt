@@ -19,5 +19,4 @@ import androidx.compose.runtime.Composable
 
 @Composable
 fun Timer(seconds: Int, onCancel: () -> Unit) {
-
 }

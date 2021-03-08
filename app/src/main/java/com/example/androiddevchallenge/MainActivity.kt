@@ -54,7 +54,8 @@ fun MyApp() {
                 TopAppBar(
                     title = {
                         Text("Timer")
-                    })
+                    }
+                )
             }
         ) {
             var screen by remember { mutableStateOf(Screen.Input) }

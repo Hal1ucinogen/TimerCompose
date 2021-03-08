@@ -29,10 +29,11 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun RowScope.NumItem(num: Int, onClick: (Int) -> Unit) {
-    Card(modifier = Modifier
-        .weight(1f)
-        .fillMaxSize()
-        .clickable { onClick(num) }) {
+    Card(
+        modifier = Modifier
+            .weight(1f)
+            .fillMaxSize()
+            .clickable { onClick(num) }) {
         Box(
             modifier = Modifier.fillMaxSize(),
             contentAlignment = Alignment.Center
