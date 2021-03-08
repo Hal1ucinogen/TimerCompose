@@ -33,7 +33,8 @@ fun RowScope.NumItem(num: Int, onClick: (Int) -> Unit) {
         modifier = Modifier
             .weight(1f)
             .fillMaxSize()
-            .clickable { onClick(num) }) {
+            .clickable { onClick(num) }
+    ) {
         Box(
             modifier = Modifier.fillMaxSize(),
             contentAlignment = Alignment.Center
