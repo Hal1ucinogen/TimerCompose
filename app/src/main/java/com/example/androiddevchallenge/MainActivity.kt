@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MyTheme {
+            MyTheme(darkTheme = false) {
                 MyApp()
             }
         }
@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity() {
 
 @Composable
 fun MyApp() {
+    var seconds = 0
     Surface(color = MaterialTheme.colors.background) {
         Scaffold(
             topBar = {
@@ -59,7 +60,6 @@ fun MyApp() {
             }
         ) {
             var screen by remember { mutableStateOf(Screen.Input) }
-            var seconds = 0
             Crossfade(targetState = screen) {
                 when (screen) {
                     Screen.Input -> Input {
